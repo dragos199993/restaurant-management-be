@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { RestaurantModule } from './restaurant/restaurant.module';
 import { GraphQLModule } from '@nestjs/graphql';
+import { RestaurantsModule } from './restaurants/restaurants.module';
 
 @Module({
   imports: [
@@ -10,7 +10,7 @@ import { GraphQLModule } from '@nestjs/graphql';
       installSubscriptionHandlers: true,
       autoSchemaFile: 'schema.gql',
     }),
-    RestaurantModule,
+    RestaurantsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -3,11 +3,8 @@
 # ------------------------------------------------------
 
 type Restaurant {
-  """Name of the restaurant"""
-  title: String!
-
-  """Description the restaurant"""
-  description: String!
+  """Example field (placeholder)"""
+  exampleField: Int!
 }
 
 type Query {
